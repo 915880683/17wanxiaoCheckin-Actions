@@ -162,6 +162,8 @@ def check_in(username, password):
                     j['value'] = '36.4'
                 if j['propertyname'] == 'symptom':
                     j['value'] = '无症状'
+                if j['propertyname'] == 'gyfh':
+                    j['value'] = '否'
             campus_check_dict = campus_check_in(username, token, campus_dict, i['id'])
             check_dict_list.append(campus_check_dict)
             logging.info("--------------------------------------------------------------")
